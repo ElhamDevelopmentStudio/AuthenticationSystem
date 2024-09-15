@@ -18,6 +18,9 @@ app.use('/api/auth', authRoutes);
 const twoFactorAuthRoutes = require('./routes/twoFactorAuthRoute');
 app.use('/api/2fa', twoFactorAuthRoutes);
 
+const passwordResetRoutes = require("./routes/passwordResetRoute");
+app.use("/api/password", passwordResetRoutes);
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
