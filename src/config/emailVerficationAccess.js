@@ -1,3 +1,3 @@
 module.exports = {
-  enableEmailVerification:  true,
+  enableEmailVerification: false,
 };

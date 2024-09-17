@@ -170,3 +170,13 @@ model AuditLog {
   @@index([createdAt])
   @@map("audit_log")
 }
+
+model RateLimit {
+  id         String   @id @default(uuid())
+  key        String   @unique
+  count      Int      @default(0)
+  resetTime  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
